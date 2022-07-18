@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body {
+  @apply bg-red-200 h-screen w-screen overflow-x-hidden text-gray-900;
+}
+
+* {
+  box-sizing: border-box;
+}
