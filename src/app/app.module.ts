@@ -4,10 +4,16 @@ import { allIcons, HeroIconModule } from 'ng-heroicon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { DropMenuComponent } from './components/header/drop-menu/drop-menu.component';
+import { MobileNavComponent } from './components/header/mobile-nav/mobile-nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    DropMenuComponent,
+    MobileNavComponent
   ],
   imports: [
     BrowserModule,
@@ -16,8 +22,7 @@ import { AppComponent } from './app.component';
       ...allIcons
     },
     {
-      defaultHostDisplay: 'inlineBlock', // default 'none'
-      attachDefaultDimensionsIfNoneFound: true // default 'false'
+      attachDefaultDimensionsIfNoneFound: true, // default 'false'
     })
   ],
   providers: [],

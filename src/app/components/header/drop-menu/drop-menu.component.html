@@ -1,0 +1,49 @@
+<div class="desktop-menu h-full hidden sm:flex flex-row items-center">
+
+  <div class="main-nav h-full flex flex-row">
+    <ng-container *ngFor="let menuItem of menuItems">
+      <ng-container *ngIf="!menuItem.isOffNav">
+        <div class="menu-item relative mx-1 lg:mx-2 h-full group">
+          <button class="menu-item-button flex px-1 lg:px-2 h-full justify-center items-center font-bold text-sm opacity-70 group-hover:opacity-100">
+            <hero-icon name="cog" class="w-5 h-5 md:mr-1"></hero-icon>
+            <div *ngIf="!menuItem.isOffNav" class="hidden md:inline-flex flex-row items-center">
+              <span>{{menuItem.label}}</span>
+              <hero-icon name="chevron-down" type="solid" class="text-black fill-black w-4 h-4 ml-1"></hero-icon>
+            </div>
+          </button>
+          <div class="menu-item-dropdown bg-white rounded-lg absolute top-full left-0 ml-2 px-4 hidden group-hover:flex flex-col transition-all delay-150">
+            <div class="triangle-with-shadow"></div>
+            <ng-container *ngFor="let dropItem of menuItem.dropItems">
+              <a href="#" class="menu-subitem border-b last:border-b-0 border-gray-300 w-full whitespace-nowrap py-2 hover:text-orange-500">
+                <span class="font-semibold text-sm"> {{dropItem.label}}</span>
+              </a>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <span class="v-sep hidden sm:inline-block md:hidden h-5 mx-4 border-l border-gray-700"></span>
+
+  <div class="off-nav h-full flex flex-row">
+    <ng-container *ngFor="let menuItem of menuItems">
+      <ng-container *ngIf="menuItem.isOffNav">
+        <div class="menu-item relative mx-1 h-full group">
+          <button class="menu-item-button flex px-1 h-full justify-center items-center font-bold text-sm opacity-70 group-hover:opacity-100">
+            <hero-icon name="cog" class="w-5 h-5"></hero-icon>
+          </button>
+          <div class="menu-item-dropdown bg-white rounded-lg absolute top-full -right-4 px-4 hidden group-hover:flex flex-col">
+            <div class="triangle-with-shadow"></div>
+            <ng-container *ngFor="let dropItem of menuItem.dropItems">
+              <a href="#" class="menu-subitem border-b last:border-b-0 border-gray-300 w-full whitespace-nowrap py-2 hover:text-orange-500">
+                <span class="font-semibold text-sm"> {{dropItem.label}}</span>
+              </a>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+
+</div>

@@ -1,41 +1,5 @@
 <div class="page bg-yellow-100 flex min-h-full">
 
-  <div class="nav fixed w-full h-16 py-2 px-4 bg-white shadow-sm">
-    <div class="nav-container h-full flex flex-row justify-between items-center">
-      <div class="logo bg-yellow-100 h-full w-28">logo</div>
-
-      <div class="desktop-menu hidden md:flex">
-        <div class="main-nav flex flex-row">
-          <ng-container li *ngFor="let e of [].constructor(5); let i = index">
-            <div class="menu-item relative mx-2 px-2 h-full group">
-              <button class="menu-item-button font-bold">
-                <span></span>
-                <span>Menu Item {{i+1}}</span>
-              </button>
-              <div class="menu-item-dropdown bg-white rounded-lg absolute top-full left-0 ml-2 px-4 hidden group-hover:flex flex-col">
-                <ng-container li *ngFor="let e of [].constructor(5); let i = index">
-                  <a href="#" class="menu-subitem border-b last:border-b-0 border-gray-300 w-full whitespace-nowrap py-2 hover:text-orange-500 font-semibold">
-                    <span></span>
-                    <span> Menu Subitem {{i+1}}</span>
-                  </a>
-                </ng-container>
-              </div>
-            </div>
-          </ng-container>
-        </div>
-        <div class="off-nav">
-
-        </div>
-      </div>
-
-
-      <button class="mobile-menu-button bg-orange-300 h-10 w-10 flex justify-center items-center">
-        <hero-icon name="menu" class="'w-5 h-5 text-red-900'">blabla</hero-icon>
-      </button>
-
-
-    </div>
-  </div>
-
+  <app-header></app-header>
   <div class="page-content bg-green-100 flex-1 pt-16">here is page content</div>
 </div>
