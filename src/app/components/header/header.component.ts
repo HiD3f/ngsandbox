@@ -134,14 +134,12 @@ export class HeaderComponent implements OnInit {
           contacts: [
             {
               label: "Commercial",
-              phoneNumber: "0651544837",
-              phoneNumberAlt: "0651547654",
+              phone: "0151 54 48 37 / 53 55",
               email: "contact@valorissimo.com"
             },
             {
               label: "Mandat",
-              phoneNumber: "0651544837",
-              phoneNumberAlt: "0651542398",
+              phone: "0151 54 48 37 / 53 55",
               email: "mandat@valorissimo.com"
             }
           ]

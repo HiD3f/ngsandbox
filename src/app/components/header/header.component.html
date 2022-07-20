@@ -1,18 +1,21 @@
 <div class="nav fixed w-full h-16 py-2 px-4 bg-white shadow-xl">
   <div class="nav-container h-full flex flex-row justify-between items-center">
-    <div class="logo bg-yellow-100 h-full w-28">logo</div>
+    <div class="logo h-full w-40 flex-shrink-0 flex items-center">
+      <img src="https://int.valorissimo.com/assets/img/logo/LogoVALORISSIMO_ORANGE_BLEU_noPadding.svg" class="h-full">
+    </div>
 
     <div class="h-full flex flex-row items-center">
       <app-drop-menu [menuItems]="menuItemsList"></app-drop-menu>
 
       <div class="add-prospect hidden sm:flex ml-4">
         <button
-          class="flex justify-center items-center rounded-full w-9 md:w-auto md:px-4 h-9 bg-gradient-to-r from-orange-400 to-orange-500"
+          class="flex justify-center items-center rounded-full w-9 lg:w-auto lg:px-4 h-9 bg-gradient-to-r from-orange-400 to-orange-500"
           id="prospect-registration"
           >
-          <span class="icon-plus-small text-xs leading-3 md:hidden text-white"> </span>
-          <hero-icon name="plus" class="'w-5 h-5 text-white text-white'"></hero-icon>
-          <span class="hidden md:inline-block text-xs ml-1 text-white uppercase font-bold text-xxs whitespace-nowrap">
+          <div class="lg:hidden">
+            <hero-icon name="plus" class="'w-5 h-5 text-white text-white'"></hero-icon>
+          </div>
+          <span class="hidden lg:inline-block text-xs ml-1 text-white uppercase font-bold text-xxs whitespace-nowrap">
             Déclarer un prospect
           </span>
         </button>
