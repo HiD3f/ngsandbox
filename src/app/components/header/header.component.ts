@@ -159,7 +159,7 @@ export class HeaderComponent implements OnInit {
         },
         {
           label: "Déconnexion",
-          color: "#EB5757",
+          twTxtColor: "text-red-600",
           action: "#",
         },
       ]
