@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DropMenuComponent } from './components/header/drop-menu/drop-menu.component';
 import { MobileNavComponent } from './components/header/mobile-nav/mobile-nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { MobileNavComponent } from './components/header/mobile-nav/mobile-nav.co
     },
     {
       attachDefaultDimensionsIfNoneFound: true, // default 'false'
-    })
+    }),
+    BrowserAnimationsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

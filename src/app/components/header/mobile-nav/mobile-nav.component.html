@@ -1,1 +1,43 @@
-<p>mobile-nav works!</p>
+<div class="mobile-nav flex flex-col absolute top-0 right-0 h-screen w-4/5 max-w-xs bg-white">
+  <mat-accordion displayMode="flat" [multi]="false" [hideToggle]="false">
+
+    <ng-container *ngFor="let menuItem of menuItems">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header class="flex flex-row items-center justify-start">
+          <hero-icon [name]="menuItem.icon" class="w-5 h-5 lg:mr-1"></hero-icon>
+          <!-- add feature for altIcon if action = active -->
+          <!-- <hero-icon [name]="menuItem.altIcon" class="w-5 h-5 lg:mr-1 text-orange-600"></hero-icon> -->
+
+          <div class="inline-flex flex-row items-center">
+            <span>{{menuItem.label}}</span>
+          </div>
+        </mat-expansion-panel-header>
+
+        <div>
+          <ng-container *ngFor="let dropItem of menuItem.dropItems">
+            <!-- to adapt for in-app routes -->
+            <ng-container *ngIf="dropItem.extLink || dropItem.route || dropItem.action">
+              <a [attr.href]="dropItem.extLink" class="menu-subitem cursor-pointer flex items-center border-b last:border-b-0 border-gray-300 w-full whitespace-nowrap py-2 hover:text-orange-500">
+                <span class="font-semibold text-sm" ngClass="{{dropItem.twTxtColor}}"> {{dropItem.label}}</span>
+                <hero-icon *ngIf="dropItem.extLink" name="external-link" type="outline" class="text-gray-400 w-4 h-4 ml-1"></hero-icon>
+              </a>
+            </ng-container>
+
+            <ng-container *ngIf="dropItem.contacts">
+              <ng-container *ngFor="let contact of dropItem.contacts">
+                <div class="contact items-center border-b last:border-b-0 border-gray-300 uppercase font-bold">
+                  <p>{{contact.label}}</p>
+                  <p>{{contact.phone}}</p>
+                  <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+                </div>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+      </mat-expansion-panel>
+    </ng-container>
+
+
+  </mat-accordion>
+
+</div>

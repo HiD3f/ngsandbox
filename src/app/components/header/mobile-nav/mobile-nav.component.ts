@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-mobile-nav',
   templateUrl: './mobile-nav.component.html',
@@ -11,5 +10,7 @@ export class MobileNavComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input() menuItems: any;
 
 }
