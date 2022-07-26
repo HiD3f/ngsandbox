@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ModalDisplayService } from 'src/app/services/modal-display.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor( private readonly modalDisplayService: ModalDisplayService ) { }
+
 
   ngOnInit(): void {
+  }
+
+  displayModalPanel(): void {
+    this.modalDisplayService.changeUiKitDisplaying(true);
   }
 
   menuItemsList = [
@@ -147,7 +153,7 @@ export class HeaderComponent implements OnInit {
       ]
     },
     {
-      label: "Utilisateur",
+      label: "Compte",
       icon: `user`,
       isOffNav: true,
       dropItems:[

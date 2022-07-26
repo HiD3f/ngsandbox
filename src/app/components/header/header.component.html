@@ -7,7 +7,7 @@
     <div class="h-full flex flex-row items-center">
       <app-drop-menu [menuItems]="menuItemsList"></app-drop-menu>
 
-      <div class="add-prospect hidden sm:flex ml-4">
+      <div class="add-prospect flex ml-4 mr-4 lg:mr-0">
         <button
           class="flex justify-center items-center rounded-full w-9 lg:w-auto lg:px-4 h-9 bg-gradient-to-r from-orange-400 to-orange-500"
           id="prospect-registration"
@@ -21,7 +21,7 @@
         </button>
       </div>
 
-      <button class="mobile-menu-button bg-orange-300 h-10 w-10 sm:hidden flex justify-center items-center">
+      <button class="mobile-menu-button h-10 w-10 sm:hidden flex justify-center items-center" (click)="displayModalPanel()">
         <hero-icon name="menu" class="'w-5 h-5 text-red-900'"></hero-icon>
       </button>
     </div>

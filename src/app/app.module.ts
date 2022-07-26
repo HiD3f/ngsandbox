@@ -8,15 +8,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { DropMenuComponent } from './components/header/drop-menu/drop-menu.component';
 import { MobileNavComponent } from './components/header/mobile-nav/mobile-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatExpansionModule} from '@angular/material/expansion';
-
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     DropMenuComponent,
-    MobileNavComponent
+    MobileNavComponent,
   ],
   imports: [
     BrowserModule,
