@@ -32,7 +32,7 @@ export class MobileNavComponent implements OnInit {
   }
 
   toggleModalPanelCollapsed(): void {
-    this.modalDisplayService.changeUiKitDisplaying(this.modalPanelCollapsed);
+    this.modalDisplayService.changeModalDisplay(this.modalPanelCollapsed);
   }
 
   @Input() menuItems: any;

@@ -13,7 +13,7 @@ export class ModalDisplayService {
   // eslint-disable-next-line @typescript-eslint/member-ordering
   isModalDisplayed$ = this.isModalDisplayed.asObservable();
 
-  changeUiKitDisplaying(display: boolean): void {
+  changeModalDisplay(display: boolean): void {
     this.isModalDisplayed.next(display);
   }
 }

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   displayModalPanel(): void {
-    this.modalDisplayService.changeUiKitDisplaying(true);
+    this.modalDisplayService.changeModalDisplay(true);
   }
 
   menuItemsList = [
