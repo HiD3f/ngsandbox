@@ -1,5 +1,8 @@
 <div class="page bg-yellow-100 flex min-h-full">
 
   <app-header></app-header>
-  <div class="page-content bg-green-100 flex-1 pt-16">here is page content</div>
+  <div class="page-content bg-green-100 flex-1 pt-16">
+    <div *ngIf="selectedItem">j'ai selectionné le fruit: {{selectedItem.label}} son code est {{selectedItem.value}}</div>
+    <app-drop-down [Items]="items" (OnChange)="selectItem($event)" class="w-2"></app-drop-down>
+  </div>
 </div>

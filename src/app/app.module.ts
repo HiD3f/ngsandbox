@@ -9,6 +9,7 @@ import { DropMenuComponent } from './components/header/drop-menu/drop-menu.compo
 import { MobileNavComponent } from './components/header/mobile-nav/mobile-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { DropDownComponent } from './components/drop-down/drop-down.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     HeaderComponent,
     DropMenuComponent,
     MobileNavComponent,
+    DropDownComponent,
   ],
   imports: [
     BrowserModule,
